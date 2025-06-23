@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ 
+}
+
+
+header {
+  background-color: burlywood;
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+}
+
+h1 {
+  margin: 1.5rem;
+  text-align: center;
+}
+
+header img {
+  width: 100px;
+  border-radius: 50%;
+  order: -1;
+}
+
+body {
+  background-color: lightgray;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  height: 100vh; 
+  display: flex;
+  flex-direction: column;
+}
+
+
+nav ul {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+#skip {
+  margin: 20px;
+  text-decoration: none;
+}
+
+main{
+  padding: 1em;
+}
+#main_content>p{
+  max-width: 1000px;
+  margin: 2em auto;
+}
+
+
+p a {
+  text-decoration: none;
+}
+
+footer {
+  border-top: solid 1px black;
+  background-color: lightblue;
+  padding: 1em;
+  margin-top: auto;
+  
+  
+
+ 
+}
+
+
+
+/* ---NEIGHBORHOOD--- */
+
+.image_container {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  grid-row-gap: 1em;
+  padding: 20px;
+}
+
+.image_container img {
+  border-radius: 10px;
+  border: solid 1px;
+  width: 70%;
+  margin: 0 auto;
+  aspect-ratio: 1.2 / 1;
+  object-fit: cover;
+}
+
+ /* ---PARKS--- */
+
+.image_container2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1em;
+}
+
+.image_container2 img {
+  width: clamp(150px, 20vw, 250px);
+  height: auto;
+  border: solid 1px;
+  border-radius: 10px;
+}
+
+@media (min-width:850px){
+  header{
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  nav>ul{
+    flex-direction: row;
+    gap: 1.5em;
+  }
+  .image_container{
+    grid-template-columns: 1fr 1fr;
+  }
+}
